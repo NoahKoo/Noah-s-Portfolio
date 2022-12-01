@@ -201,16 +201,16 @@
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-          <button class="category__btn active">
+          <button class="category__btn active" data-filter="*">
             All<span class="category__count">3</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="html"">
             HTML&CSS&JS<span class="category__count">1</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="react">
             REACT<span class="category__count">1</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="typescript">
             TYPESCRIPT<span class="category__count">1</span>
           </button>
         </div>
@@ -220,6 +220,7 @@
             href="https://noahkoo.github.io/nonoa-clone-2022/"
             class="project"
             target="blank"
+            data-type="html"
           >
             <img
               src="imgs/projects/NonoaClone.png"
@@ -235,6 +236,7 @@
             href="https://noahkoo.github.io/momentum/"
             class="project"
             target="blank"
+            data-type="react"
           >
             <img
               src="imgs/projects/TodoList.png"
@@ -250,6 +252,7 @@
             href="https://noahkoo.github.io/Music-Play-list/"
             class="project"
             target="blank"
+            data-type="typescript"
           >
             <img
               src="imgs/projects/Mobile Music.png"
@@ -319,5 +322,10 @@
         <p class="contact__rights">2020 Noah Coding - All rights reserved</p>
       </div>
     </section>
+
+    <!-- Arrow up  -->
+    <button class="arrow-up">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
   </body>
 </html>
