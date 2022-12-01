@@ -596,12 +596,3 @@ p {
     right: 16px;
     bottom: 16px;
   }
-  /*
-  .testimonial__avatar:nth-child(odd){
-    margin:auto;
-  }
-  .testimonial__avatar:nth-child(even){
-    margin-top:5px;
-    margin:auto;
-  }
-  */
