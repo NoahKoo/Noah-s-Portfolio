@@ -19,13 +19,14 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
 });
 
-//  Handle click on "contact me" button on home
-const homeContactBtn = document.querySelector('.home__contact');
-homeContactBtn.addEventListener('click', () => {
-  scrollIntoView('#contact');
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
 });
 
 // Make home slowly fade to transparent as the window scrolls down
