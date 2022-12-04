@@ -54,6 +54,29 @@
       <div class="box">20</div>
     </div>
 
-    <script></script>
+    <script>
+      const boxes = document.querySelectorAll('.box');
+
+      const options = {
+        root: document.querySelector('.container'), // 지정하지 않으면 viewport가 기본적으로 사용됨
+        rootMargin: '0px', // 지정하지 않으면 기본적으로 0px로 사용됨
+        threshold: 0.2, // 기본값은 0으로 사용됨 / 값은 0~1(100%)까지
+      };
+
+      // WEP API에서 제공하는 것 중 하나로 우리가 원하는 요소가 특정 영역에 들어 왔을때
+      // 알려주는 관찰자
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active');
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, options);
+      boxes.forEach((box) => observer.observe(box));
+    </script>
   </body>
 </html>
