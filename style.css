@@ -111,21 +111,27 @@ p {
   padding: 8px;
 }
 
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: white;
+}
+
 .navbar__menu {
   display: flex;
+  margin: 0;
 }
 
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
+  color: var(--color-white);
   cursor: pointer;
   border-radius: var(--size-border-radius);
-  border: 1px solid transparent;
 }
 
-.navbar__logo {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
+.navbar__menu__item.active{
+  border: 1px solid var(--color-white);
 }
 
 .navbar__menu__item:hover {
